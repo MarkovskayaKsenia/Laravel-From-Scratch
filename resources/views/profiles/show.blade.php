@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app>
     <header class="mb-6 relative">
         <img class="mb-2 rounded-lg" src="/images/profile-banner.jpg" alt="">
 
@@ -30,4 +28,4 @@
 
     @include('timeline', ['tweets' => $user->tweets])
 
-@endsection
+</x-app>
