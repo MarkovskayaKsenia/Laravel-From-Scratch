@@ -4,7 +4,7 @@
             <img class="mb-2 rounded-lg" src="/images/profile-banner.jpg" alt="">
             <img src="{{ $user->avatar }}" alt="{{ $user->name }} avatar"
                  class="rounded-full mr-2 absolute bottom-0"
-                 width="150" style="left: 50%; transform: translateX(-50%) translateY(50%)">
+                 width="150" height="150" style="left: 50%; transform: translateX(-50%) translateY(50%)">
         </div>
 
 
@@ -15,7 +15,9 @@
             </div>
 
             <div class="flex">
-                <a href="" class="rounded-full border border-gray-300 py-2 px-4 text-black text-xs mr-2">Edit Profile</a>
+                @can ('edit', $user)
+                <a href="{{ $user->path('edit') }}" class="rounded-full border border-gray-300 py-2 px-4 text-black text-xs mr-2">Edit Profile</a>
+                @endcan
                 <x-follow-button :user="$user"></x-follow-button>
             </div>
         </div>

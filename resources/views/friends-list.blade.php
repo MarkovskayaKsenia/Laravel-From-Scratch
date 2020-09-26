@@ -14,7 +14,7 @@
                 </div>
             </li>
         @empty
-            <div> There are no users</div>
+            <li>No friends yet.</li>
         @endforelse
     </ul>
 </div>
