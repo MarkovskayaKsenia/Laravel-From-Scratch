@@ -4,11 +4,11 @@
             <img class="mb-2 rounded-lg" src="/images/profile-banner.jpg" alt="">
             <img src="{{ $user->avatar }}" alt="{{ $user->name }} avatar"
                  class="rounded-full mr-2 absolute bottom-0"
-                 width="150" height="150" style="left: 50%; transform: translateX(-50%) translateY(50%)">
+                 width="150" style="left: 50%; transform: translateX(-50%) translateY(50%);">
         </div>
 
 
-        <div class="flex justify-between items-center mb-6">
+        <div class="flex justify-between items-center mb-10">
             <div>
                 <h2 class="font-bold text-2xl mb-0">{{ $user->name }}</h2>
                 <p class="text-sm">Joined {{ $user->created_at->diffForHumans() }}</p>
